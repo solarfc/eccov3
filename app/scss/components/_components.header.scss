@@ -1,0 +1,329 @@
+/*
+    header style
+ */
+
+.header {
+  background: #fbe1e2;
+  padding: 30px 0 151px;
+  position: relative;
+  z-index: 9;
+
+  @include mq(lg) {
+    padding: 30px 0 50px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+
+    @include mq(md) {
+      justify-content: center;
+    }
+
+    @include mq(s) {
+      display: block;
+      text-align: center;
+    }
+
+    img {
+      margin: 0;
+
+      @include mq(s) {
+        margin: 0 auto;
+      }
+    }
+
+    span {
+      font-family: $c, sans-serif;
+      font-size: 20px;
+      color: #d0838a;
+      margin: 4px 0 0 10px;
+      line-height: 1;
+
+      @include mq(s) {
+        display: block;
+        margin: 10px auto 0;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__content {
+
+    @include mq(md) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-family: $c, sans-serif;
+      font-size: 48px;
+      color: #3f3f69;
+      text-transform: uppercase;
+      max-width: 585px;
+      line-height: 1.25;
+      //margin: -11px 0 0 0;
+      margin: 30px 0 28px;
+
+      @include mq(lg) {
+        font-size: 40px;
+      }
+
+      @include mq(md) {
+        text-align: center;
+        margin: 16px auto 0;
+        order: 1;
+        position: relative;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 82px;
+          height: 68px;
+          background: url("../img/decor/header/petal-first.png") no-repeat center/cover;
+          position: absolute;
+          top: 115px;
+          right: 220px;
+        }
+      }
+
+      @include mq(s) {
+        font-size: 35px;
+
+        &:before {
+          top: 95px;
+        }
+      }
+
+      @include mq(xs) {
+        font-size: 30px;
+
+        &:before {
+          top: 150px;
+          right: 80px;
+        }
+      }
+    }
+
+    picture {
+      position: relative;
+      position: absolute;
+      top: -154px;
+      left: 348px;
+
+      @include mq(lg) {
+        width: 55%;
+        top: 0;
+        left: 410px;
+      }
+
+      @include mq(md) {
+        display: block;
+        width: 492px;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        order: 2;
+      }
+
+      img {
+
+        @include mq(lg) {
+          width: 100%;
+        }
+      }
+
+      &:before, &:after {
+        display: block;
+        font-family: $vb, sans-serif;
+        font-size: 72px;
+        color: #f94b70;
+        text-transform: uppercase;
+        position: absolute;
+
+        @include mq(lg) {
+          font-size: 58px;
+        }
+
+        @include mq(md) {
+          font-size: 48px;
+        }
+      }
+
+      &:before {
+        content: "70%";
+        top: 496px;
+        left: 329px;
+        transform: matrix( 0.96592582628907,0.25881904510252,-0.25881904510252,0.96592582628907,0,0);
+
+        @include mq(lg) {
+          top: 255px;
+          left: 165px;
+        }
+
+        @include mq(md) {
+          top: 315px;
+          left: 255px;
+        }
+      }
+
+      &:after {
+        content: "sale";
+        top: 238px;
+        left: 491px;
+        transform: matrix( 0.96592582628907,-0.25881904510252,0.25881904510252,0.96592582628907,0,0);
+
+        @include mq(lg) {
+          top: 120px;
+          left: 265px;
+        }
+
+        @include mq(md) {
+          top: 165px;
+          left: 135px;
+        }
+      }
+    }
+
+    .price {
+      margin: 67px 0 23px 45px;
+
+      @include mq(md) {
+        margin: 15px auto 23px;
+        text-align: center;
+        order: 3;
+      }
+    }
+
+    figure.order {
+
+      @include mq(md) {
+        margin: 0 auto;
+        order: 4;
+        position: relative;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 80px;
+          height: 69px;
+          background: url("../img/decor/header/petal-second.png") no-repeat center/cover;
+          position: absolute;
+          top: 131px;
+          right: 5px;
+        }
+      }
+    }
+
+    >p {
+      font-family: $c, sans-serif;
+      font-size: 24px;
+      color: #f82753;
+      line-height: 1.333;
+      box-sizing: border-box;
+      max-width: 350px;
+      padding-left: 75px;
+      position: relative;
+      margin: 0 0;
+
+      @include mq(md) {
+        text-align: center;
+        margin: 40px auto 0;
+        order: 5;
+        padding-left: 0;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 71px;
+        height: 87px;
+        background: url("../img/header-gift.png") no-repeat center/cover;
+        position: absolute;
+        top: -10px;
+        left: 0;
+
+        @include mq(md) {
+          position: static;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .decor {
+
+      &.first {
+        top: 211px;
+        left: -248px;
+
+        @include mq(lg) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  img.wave {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    @include mq(xxlg) {
+      width: 89%;
+    }
+
+    @include mq(md) {
+      width: 1920px;
+      left: calc(100% - 108%);
+    }
+
+    @include mq(s) {
+      left: calc(100% - 113%);
+    }
+
+    @include mq(xs) {
+      left: -128px
+    }
+  }
+
+  .decor.branch {
+    position: absolute;
+    top: 29px;
+    right: 0;
+    z-index: -1;
+
+    @include mq(xxlg) {
+      width: 25%;
+    }
+
+    @include mq(xlg) {
+      width: 15%;
+    }
+
+    @include mq(lg) {
+      width: 23%;
+    }
+
+    @include mq(md) {
+      transform: rotate(-68deg);
+    }
+
+    @include mq(s) {
+      width: 134px;
+      right: -70px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

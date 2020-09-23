@@ -1,0 +1,268 @@
+/*
+    banner style
+ */
+
+.banner {
+  padding: 0 0 35px;
+  position: relative;
+  margin-top: -101px;
+
+  @include mq(md) {
+    margin-top: 0;
+    background: #f5dbdc;
+    padding: 94px 0 35px;
+  }
+
+  .container {
+    position: relative;
+
+    &:after {
+      content: "";
+      display: none;
+      width: 46px;
+      height: 45px;
+      background: url("../img/decor/banner/2.png") no-repeat center/cover;
+      position: absolute;
+      bottom: -63px;
+      right: -5px;
+
+      @include mq(lg) {
+        display: block;
+        z-index: 20;
+      }
+    }
+  }
+
+  img.logo {
+    position: relative;
+    z-index: 9;
+  }
+
+  img.girl {
+    position: absolute;
+    top: 0;
+    left: -264px;
+    z-index: 9;
+    pointer-events: none;
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  h2 {
+    font-family: $c, sans-serif;
+    font-size: 48px;
+    color: #3f3f69;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.25;
+    margin: 40px auto 0;
+    position: relative;
+    z-index: 9;
+
+    @include mq(lg) {
+      font-size: 40px;
+    }
+
+    @include mq(s) {
+      font-size: 35px;
+      position: relative;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include mq(xs) {
+      font-size: 30px;
+    }
+
+    &:before {
+      content: "";
+      display: none;
+      width: 54px;
+      height: 29px;
+      background: url("../img/decor/banner/1.png");
+      position: absolute;
+      bottom: -44px;
+      left: 0;
+
+      @include mq(lg) {
+        display: block;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 49px;
+    position: relative;
+    z-index: 9;
+
+    @include mq(s) {
+      flex-wrap: wrap;
+      max-width: 360px;
+      margin: 184px auto 0;
+    }
+
+    @include mq(xs) {
+      max-width: 300px;
+    }
+
+    p {
+      font-family: $vb, sans-serif;
+      font-size: 60px;
+      color: #f94b70;
+      text-transform: uppercase;
+      display: inline-block;
+      position: absolute;
+
+      @include mq(lg) {
+        font-size: 55px;
+      }
+
+      @include mq(md) {
+        font-size: 48px;
+      }
+
+      @include mq(s) {
+
+      }
+
+      &:nth-child(1) {
+        transform: matrix( 0.96592582628907,-0.25881904510252,0.25881904510252,0.96592582628907,0,0);
+        top: -12px;
+        left: 64.21%;
+
+        @include mq(s) {
+          top: -146px;
+          left: 70px;
+        }
+
+        @include mq(xs) {
+          left: 40px;
+        }
+      }
+
+      &:nth-child(2) {
+        transform: matrix( 0.96592582628907,0.25881904510252,-0.25881904510252,0.96592582628907,0,0);
+        top: -2px;
+        left: 29.73%;
+
+        @include mq(md) {
+          top: -10px;
+        }
+
+        @include mq(s) {
+          top: -114px;
+          left: 165px;
+          transform:  matrix( 0.96592582628907,-0.25881904510252,0.25881904510252,0.96592582628907,0,0);
+        }
+
+        @include mq(xs) {
+          left: 135px;
+        }
+      }
+    }
+
+    a {
+      text-align: center;
+      width: 32%;
+      max-width: 360px;
+
+      @include mq(s) {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      img {
+        width: 88%;
+        max-width: 315px;
+
+        @include mq(xs) {
+          width: 100%;
+        }
+      }
+
+      span {
+        font-family: $vr, sans-serif;
+        font-size: 30px;
+        color: #3f3f69;
+        display: block;
+        margin-top: 10px;
+
+        @include mq(s) {
+          position: absolute;
+          top: 0;
+          left: 25px;
+        }
+
+        @include mq(xs) {
+          top: -10px;
+          left: 0;
+        }
+      }
+
+      &:nth-child(4) {
+
+        @include mq(s) {
+          margin: 40px auto;
+        }
+      }
+    }
+  }
+
+  .price {
+    text-align: center;
+    margin: 38px auto 23px;
+    position: relative;
+    z-index: 9;
+  }
+
+  figure {
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
+  }
+
+  picture {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include mq(xxlg) {
+      width: 1920px;
+    }
+
+    @include mq(s) {
+      width: 1088px;
+      left: -320px;
+    }
+
+    @include mq(xs) {
+      left: -394px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  img.petal {
+    width: 91%;
+    max-width: 1738px;
+    position: absolute;
+    bottom: -37px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+}

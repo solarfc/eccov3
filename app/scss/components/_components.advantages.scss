@@ -1,0 +1,354 @@
+/*
+    advantages style
+ */
+
+.advantages {
+  background: #ffedeb;
+  padding: 313px 0 245px;
+  position: relative;
+  margin-top: -34px;
+
+  @include mq(md) {
+    padding: 24px 0 50px;
+    margin-top: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 9;
+  }
+
+  img {
+
+    &.boot {
+      position: absolute;
+      top: -237px;
+      right: -300px;
+
+      @include mq(md) {
+        position: static;
+        width: 230px;
+        margin: 0 20% 15px auto;
+      }
+
+      @include mq(xs) {
+        margin: 0 6% 15px auto;
+      }
+    }
+
+    &.logo {
+
+    }
+  }
+
+  h3 {
+    text-align: center;
+    margin: 20px auto 0;
+
+    @include mq(s) {
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+
+  &__content {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 176px;
+
+    @include mq(md) {
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    &-switch {
+      box-sizing: border-box;
+      width: 212px;
+      padding: 30px 20px;
+      background: #ffedeb;
+      border-radius: 10px;
+      box-shadow: 0px 5px 9.5px 0.5px rgba(0, 0, 0, 0.1);
+
+      @include mq(md) {
+        display: none;
+      }
+
+      figure {
+        box-sizing: border-box;
+        padding-left: 35px;
+        position: relative;
+        cursor: pointer;
+
+        @include mq(md) {
+          max-width: 172px;
+        }
+
+        img {
+          width: 100%;
+        }
+
+        &:nth-child(2) {
+          margin: 25px 0 21px;
+
+          @include mq(md) {
+            margin: 0;
+          }
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 18px;
+          height: 20px;
+          background: url("../img/triangle.png") no-repeat center/cover;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          opacity: 0;
+          transition: all 0.5s ease-in-out;
+        }
+
+        &.active {
+
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &-img {
+      display: flex;
+      position: relative;
+      width: 78%;
+      max-width: 878px;
+      height: 386px;
+
+      @include mq(md) {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: auto;
+      }
+
+      @include mq(xs) {
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      img {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+
+        @include mq(md) {
+          position: static;
+          width: 50%;
+          opacity: 1;
+
+          &:nth-child(3) {
+            margin: 50px auto;
+
+            @include mq(s) {
+              margin: 0 auto;
+            }
+          }
+        }
+
+        @include mq(xs) {
+          width: 100%;
+        }
+
+        &.active {
+          position: relative;
+          z-index: 9;
+          opacity: 1;
+          margin-top: auto;
+        }
+      }
+
+      figure {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px 19px;
+        max-width: 350px;
+        background: #fbe1e2;
+        border-left: 10px solid #f94b70;
+        border-radius: 10px;
+        box-shadow: 0px 5px 9.5px 0.5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        position: absolute;
+
+        @include mq(md) {
+          position: relative;
+          top: 0 !important;
+          left: 0 !important;
+          width: 50%;
+        }
+
+        @include mq(s) {
+          width: 100%;
+          max-width: 380px;
+          margin: 30px auto;
+        }
+
+        p {
+          font-family: $c, sans-serif;
+          font-size: 20px;
+          color: #222;
+          line-height: 1.5;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 2px;
+          background: #f94b70;
+          position: absolute;
+          left: 184px;
+          z-index: 15;
+
+          @include mq(md) {
+            display: none;
+          }
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+          background: url("../img/circle.png") no-repeat center/cover;
+          position: absolute;
+          z-index: 15;
+
+          @include mq(md) {
+            display: none;
+          }
+        }
+
+        &:nth-child(2) {
+          top: -44px;
+          left: -20px;
+
+          @include mq(lg) {
+            left: 0;
+          }
+
+          &:before {
+            height: 132px;
+            bottom: -132px;
+            transform: skewX(15deg);
+          }
+
+          &:after {
+            top: 280px;
+            left: 195px;
+          }
+        }
+
+        &:nth-child(4) {
+          top: -134px;
+          left: 469px;
+
+          @include mq(lg) {
+            left: 390px;
+          }
+
+          @include mq(md) {
+            margin: 50px 0;
+          }
+
+          @include mq(s) {
+            margin: 30px auto;
+          }
+
+          &:before {
+            height: 202px;
+            bottom: -202px;
+            transform: skewX(12deg);
+          }
+
+          &:after {
+            top: 320px;
+            left: 198px;
+          }
+        }
+
+        &:nth-child(6) {
+          bottom: -173px;
+          left: 85px;
+
+          @include mq(lg) {
+            left: 25px;
+          }
+
+          &:before {
+            width: 5px;
+            height: 80px;
+            top: -80px;
+            left: 265px;
+            transform: skewX(-67deg);
+          }
+
+          &:after {
+            top: -94px;
+            left: 359px;
+          }
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 85px;
+      height: 100px;
+      background: url("../img/decor/advantages.png") no-repeat center/cover;
+      position: absolute;
+      top: -441px;
+      left: -85px;
+
+      @include mq(md) {
+        top: -49px;
+        left: 0;
+      }
+    }
+  }
+
+  img.city {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq(xxlg) {
+      width: 100%;
+    }
+
+    @include mq(md) {
+      width: 160%;
+    }
+
+    @include mq(s) {
+      width: 1920px;
+      bottom: 135px;
+      left: calc(100% - 1721px);
+      transform: none;
+    }
+
+    @include mq(xs) {
+      left: calc(100% - 1464px);
+    }
+  }
+}

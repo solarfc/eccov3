@@ -1,0 +1,205 @@
+/*
+    spray style
+ */
+
+.spray {
+  background: #ffedeb;
+  padding: 131px 0 139px;
+  position: relative;
+  z-index: 9;
+
+  @include mq(md) {
+    padding: 50px 0 75px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__content {
+    max-width: 470px;
+    margin-left: 40%;
+
+    @include mq(md) {
+      margin: 0 auto;
+    }
+
+    h3 {
+      text-align: center;
+      color: #f82753;
+    }
+
+    &-img {
+      position: relative;
+      position: absolute;
+      top: -31px;
+      left: 14.4%;
+
+      @include mq(md) {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 186px;
+        margin: 50px auto 0;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 63px;
+        height: 114px;
+        background: url("../img/decor/spray/petal.png") no-repeat center/cover;
+        position: absolute;
+        top: 0;
+        left: calc(100% + 898px);
+
+        @include mq(md) {
+          top: -30px;
+          left: -54px;
+        }
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 75px;
+        height: 91px;
+        background: url("../img/decor/spray/gift-small.png") no-repeat center/cover;
+        position: absolute;
+        bottom: 359px;
+        right: calc(100% + 197px);
+
+        @include mq(md) {
+          bottom: 61px;
+          right: -62px;
+        }
+      }
+    }
+
+    ul {
+      margin-top: 41px;
+
+      li {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 347px;
+        padding: 15px 20px 15px 53px;
+        background: #fbe1e2;
+        box-shadow: 0px 5px 9.5px 0.5px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin: 0 auto;
+        position: relative;
+
+        span {
+          font-family: $c, sans-serif;
+          font-size: 20px;
+          color: #222;
+          line-height: 1.5;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 24px;
+          height: 24px;
+          background: url("../img/check.png") no-repeat center/cover;
+          position: absolute;
+          top: 50%;
+          left: 15px;
+          transform: translateY(-50%);
+        }
+
+        &:nth-child(2) {
+          margin: 20px auto;
+        }
+
+        &:nth-child(3) {
+
+          &:after {
+            content: "";
+            display: block;
+            width: 133px;
+            height: 148px;
+            background: url("../img/decor/spray/gift-big.png") no-repeat center/cover;
+            position: absolute;
+            top: -16px;
+            right: -97px;
+
+            @include mq(md) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .decor {
+
+      @include mq(md) {
+        display: none;
+      }
+
+      &.white {
+        top: 216px;
+        left: -222px;
+      }
+
+      &.blue {
+        top: 247px;
+        right: -281px;
+      }
+
+      &.petals {
+        top: -113px;
+        left: -76px;
+      }
+    }
+  }
+
+  picture.wave {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    @include mq(xxlg) {
+      width: 1920px;
+    }
+
+    @include mq(md) {
+      width: 1920px;
+      top: 220px;
+      left: calc(100% - 1325px);
+      transform: none;
+    }
+
+    @include mq(s) {
+      top: 200px;
+      left: calc(100% - 1625px);
+    }
+
+    @include mq(xs) {
+      top: 380px;
+      left: calc(100% - 1425px);
+
+    }
+
+    img {
+      width: 100%;
+    }
+
+    //@include mq(xlg) {
+    //  top: 16px;
+    //}
+
+    //img {
+    //  width: 100%;
+    //}
+  }
+}
